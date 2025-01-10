@@ -1,6 +1,6 @@
 ## Game Center Plugin for Apache Cordova
 
-This plugin allows developers to utilise the iOS Game Center in their Cordova / PhoneGap app.
+This plugin allows developers to utilise the iOS Game Center in their Cordova app.
 
 The code under active development and currently has support for [auth](#auth), [submitting a score](#submit-score) and [showing leaderboards](#show-leaderboard) using the native viewcontroller.
 
