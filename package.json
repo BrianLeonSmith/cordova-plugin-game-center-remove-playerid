@@ -4,7 +4,7 @@
   "author": "Brian Leon Smith <hello@brianleonsmith.com> (https://madebyleon.app/)",
   "description": "Cordova Game Center Plugin to utilise the iOS Game Center in your app. There is currently support for authentication, submitting a score to a leaderboard, displaying a native leaderboard and achievements.",
   "cordova": {
-    "id": "cordova-plugin-game-center",
+    "id": "cordova-plugin-game-center-remove-playerid",
     "platforms": [
       "ios"
     ]
