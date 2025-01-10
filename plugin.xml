@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-game-center" version="0.4.2">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-game-center-remove-playerid" version="0.4.2">
     <name>Game Center</name>
     <author>Brian Leon Smith (https://madebyleon.app/)</author>
     <description>Cordova Game Center Plugin to utilise the iOS Game Center in your app.
