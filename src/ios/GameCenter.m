@@ -28,8 +28,7 @@
                 {
                     NSDictionary* user = @{
                         @"alias":localPlayer.alias,
-                        @"displayName":localPlayer.displayName,
-                        @"playerID":localPlayer.playerID
+                        @"displayName":localPlayer.displayName
                     };
                     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:user];
                 }
@@ -251,7 +250,6 @@
                  entry[@"completed"] = [NSNumber numberWithBool:achievement.completed];
                  entry[@"lastReportedDate"] = [NSNumber numberWithDouble:[achievement.lastReportedDate timeIntervalSince1970] * 1000];
                  entry[@"showsCompletionBanner"] = [NSNumber numberWithBool:achievement.showsCompletionBanner];
-                 entry[@"playerID"] = achievement.playerID;
 
                  [earntAchievements addObject:entry];
              }
