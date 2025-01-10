@@ -1,12 +1,8 @@
-## Game Center Plugin for Apache Cordova [![npm version](https://badge.fury.io/js/cordova-plugin-game-center.svg)](http://badge.fury.io/js/cordova-plugin-game-center)
+## Game Center Plugin for Apache Cordova
 
 This plugin allows developers to utilise the iOS Game Center in their Cordova / PhoneGap app.
 
 The code under active development and currently has support for [auth](#auth), [submitting a score](#submit-score) and [showing leaderboards](#show-leaderboard) using the native viewcontroller.
-
-#### Live demo
-
-See this plugin working in a live app: [playadds.com](http://playadds.com)
 
 ### Before you start
 
@@ -17,13 +13,13 @@ Adding Game Center support requires more than simple coding changes. To create a
 #### Latest published version on npm (with Cordova CLI >= 5.0.0)
 
 ```
-cordova plugin add cordova-plugin-game-center
+cordova plugin add cordova-plugin-game-center-remove-playerid
 ```
 
 #### Latest version from GitHub
 
 ```
-cordova plugin add https://github.com/leecrossley/cordova-plugin-game-center.git
+cordova plugin add https://github.com/leecrossley/cordova-plugin-game-center-remove-playerid.git
 ```
 
 You **do not** need to reference any JavaScript, the Cordova plugin architecture will add a gamecenter object to your root automatically when you build. It will also automatically add the GameKit framework dependency.
@@ -137,7 +133,7 @@ gamecenter.getAchievements(successCallback, failureCallback);
 
 Supports iOS 7 and iOS 8 (may have limited iOS 6 support). The Game Center is Apple specific and not applicable to other platforms.
 
-Please report any [issues](https://github.com/leecrossley/cordova-plugin-game-center/issues/new).
+Please report any [issues](https://github.com/leecrossley/cordova-plugin-game-center-remove-playerid/issues/new).
 
 ## License
 
