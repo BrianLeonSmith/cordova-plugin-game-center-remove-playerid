@@ -19,7 +19,7 @@ cordova plugin add cordova-plugin-game-center-remove-playerid
 #### Latest version from GitHub
 
 ```
-cordova plugin add https://github.com/leecrossley/cordova-plugin-game-center-remove-playerid.git
+cordova plugin add https://github.com/BrianLeonSmith/cordova-plugin-game-center-remove-playerid.git
 ```
 
 You **do not** need to reference any JavaScript, the Cordova plugin architecture will add a gamecenter object to your root automatically when you build. It will also automatically add the GameKit framework dependency.
