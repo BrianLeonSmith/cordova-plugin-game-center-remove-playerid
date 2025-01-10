@@ -24,16 +24,6 @@ cordova plugin add https://github.com/BrianLeonSmith/cordova-plugin-game-center-
 
 You **do not** need to reference any JavaScript, the Cordova plugin architecture will add a gamecenter object to your root automatically when you build. It will also automatically add the GameKit framework dependency.
 
-#### PhoneGap build
-
-Add the following to your `config.xml` to use version 0.4.1 (you can also omit the version attribute to always use the latest version). You should now use the npm source:
-
-```
-<gap:plugin name="cordova-plugin-game-center" version="0.4.1" source="npm" />
-```
-
-For more information, see the [PhoneGap build docs](http://docs.build.phonegap.com/en_US/configuring_plugins.md.html#Plugins).
-
 ## Usage
 
 ### Auth
