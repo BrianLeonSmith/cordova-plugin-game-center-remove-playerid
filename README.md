@@ -1,8 +1,6 @@
 ## Game Center Plugin for Apache Cordova
 
----
 #### ⚠️ Please note this is a work in progress and may not work as intended
----
 
 This plugin allows developers to utilise the iOS Game Center in their Cordova app.
 
