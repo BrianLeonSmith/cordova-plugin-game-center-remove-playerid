@@ -5,6 +5,10 @@ var GameCenter = function () {
     this.name = "GameCenter";
 };
 
+GameCenter.prototype.echo = function (success, failure) {
+    exec(success, failure, "GameCenter", "echo", [data]);
+};
+
 GameCenter.prototype.auth = function (success, failure) {
     exec(success, failure, "GameCenter", "auth", []);
 };
