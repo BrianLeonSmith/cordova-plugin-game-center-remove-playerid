@@ -3,9 +3,9 @@
 //  Copyright (c) 2013-2015 Lee Crossley - http://ilee.co.uk
 //
 
-#import "Cordova/CDV.h"
-#import "Cordova/CDVViewController.h"
-#import "GameCenter.h"
+#import <Cordova/CDVPlugin.h>
+#import <Cordova/CDVViewController.h>
+#import <GameCenter.h>
 
 @implementation GameCenter
 
