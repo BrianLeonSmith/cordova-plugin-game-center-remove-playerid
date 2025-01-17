@@ -1,5 +1,5 @@
 
-var exec = require("cordova/exec");
+var exec = cordova.require("cordova/exec");
 
 var GameCenter = function () {
     this.name = "GameCenter";
