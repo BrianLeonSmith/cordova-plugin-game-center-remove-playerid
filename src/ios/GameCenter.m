@@ -10,13 +10,13 @@
 
 @implementation GameCenter
 
-- (void) echo:(CDVInvokedUrlCommand*)command
+- (void) testFunction:(CDVInvokedUrlCommand*)command
 {
     CDVPluginResult* pluginResult = nil;
-    NSString* echo = [command.arguments objectAtIndex:0];
+    NSString* message = [command.arguments objectAtIndex:0];
 
-    if (echo != nil) {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
+    if (message != nil) {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:message];
     } else {
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Error testing"];
     }

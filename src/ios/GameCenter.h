@@ -12,7 +12,7 @@
 
 @interface GameCenter : CDVPlugin // <GKGameCenterControllerDelegate>
 
-- (void) echo:(CDVInvokedUrlCommand*)command;
+- (void) testFunction:(CDVInvokedUrlCommand*)command;
 // - (void) auth:(CDVInvokedUrlCommand*)command;
 // - (void) getPlayerImage:(CDVInvokedUrlCommand*)command;
 // - (void) submitScore:(CDVInvokedUrlCommand*)command;
