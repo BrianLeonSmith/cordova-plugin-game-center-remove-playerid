@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-game-center-remove-playerid",
-  "version": "0.4.9",
+  "version": "0.4.17",
   "author": "Brian Leon Smith <hello@brianleonsmith.com> (https://madebyleon.app/)",
   "description": "Cordova Game Center Plugin to utilise the iOS Game Center in your app. There is currently support for authentication, submitting a score to a leaderboard, displaying a native leaderboard and achievements.",
   "cordova": {
@@ -24,20 +24,6 @@
     "ecosystem:cordova",
     "cordova-ios"
   ],
-  "engines": {
-    "cordovaDependencies": {
-      "0.1.0": {
-        "cordova": ">=3.0.0"
-      },
-      "4.0.0": {
-        "cordova": ">=3.0.0",
-        "cordova-ios": ">=6.0.0"
-      },
-      "5.0.0": {
-        "cordova": ">100"
-      }
-    }
-  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/BrianLeonSmith/cordova-plugin-game-center-remove-playerid/issues"
