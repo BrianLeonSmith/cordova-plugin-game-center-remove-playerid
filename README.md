@@ -22,24 +22,49 @@ cordova plugin add cordova-plugin-game-center-remove-playerid
 cordova plugin add https://github.com/BrianLeonSmith/cordova-plugin-game-center-remove-playerid.git
 ```
 
-You **do not** need to reference any JavaScript, the Cordova plugin architecture will add a gamecenter object to your root automatically when you build. It will also automatically add the GameKit framework dependency.
+You **do not** need to reference any JavaScript, the Cordova plugin architecture will add a GameCenter object to your root automatically when you build. It will also automatically add the GameKit framework dependency.
 
 ## Usage
 
 ### Authentication
 
-Call this after your deviceready event has fired.
+You should do this as soon as your deviceready event has been fired. The plug handles the various auth scenarios for you.
 
 ```
 var successCallback = (success) => {
-    alert("Success: " + success);
+    alert("Success: " + JSON.stringify(success));
 };
 
 var failureCallback = (err) => {
     alert("Error: " + err);
 };
 
-GameCenter.authenticateUser(successCallback, failureCallback);
+GameCenter.auth(successCallback, failureCallback);
+```
+
+### Fetch Player Image
+
+Loads the current player's photo. Automatically cached on first retrieval.
+
+```
+var successCallback = function (path) {
+    alert("Success: " + path);
+};
+
+GameCenter.getPlayerImage(successCallback, failureCallback);
+```
+
+### Submit Score
+
+Ensure you have had a successful callback from `GameCenter.auth()` first before attempting to submit a score. You should also have set up your leaderboard(s) in iTunes connect and use the leaderboard identifier assigned there as the leaderboardId.
+
+```
+var data = {
+    score: 10,
+    leaderboardId: "board1"
+};
+
+GameCenter.submitScore(successCallback, failureCallback, data);
 ```
 
 ### Show leaderboard
@@ -47,7 +72,53 @@ GameCenter.authenticateUser(successCallback, failureCallback);
 Launches the native Game Center leaderboard view controller for a leaderboard.
 
 ```
-GameCenter.showLeaderboard("board1", successCallback, failureCallback);
+var data = {
+    leaderboardId: "board1"
+};
+
+GameCenter.showLeaderboard(successCallback, failureCallback, data);
+```
+
+### Report achievement
+
+Reports an achievement to the game center:
+
+```
+var data = {
+	achievementId: "MyAchievementName",
+	percent: "100"
+};
+
+GameCenter.reportAchievement(successCallback, failureCallback, data);
+```
+
+### Reset achievements
+
+Resets the user's achievements and leaderboard.
+
+```
+GameCenter.resetAchievements(successCallback, failureCallback);
+```
+
+### Fetch achievements
+
+Fetches the user's achievements from the game center:
+
+```
+var successCallback = function (results) {
+	if (results) {
+    	for (var i = 0; i < results.length; i += 1) {
+            results[i].identifier
+            results[i].percentComplete
+            results[i].completed
+            results[i].lastReportedDate
+            results[i].showsCompletionBanner
+        }
+    }
+}
+
+GameCenter.getAchievements(successCallback, failureCallback);
+
 ```
 
 ## Platforms

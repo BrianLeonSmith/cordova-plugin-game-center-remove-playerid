@@ -1,11 +1,26 @@
 var exec = require('cordova/exec');
 
 var GameCenter = {
-    authenticateUser: function (successCallback, errorCallback) {
-        exec(successCallback, errorCallback, 'GameCenter', 'authenticateUser', []);
+    auth: function (successCallback, errorCallback) {
+        exec(successCallback, errorCallback, 'GameCenter', 'auth', []);
     },
-    showLeaderboard: function (leaderboardID, successCallback, errorCallback) {
+    getPlayerImage: function (successCallback, errorCallback) {
+        exec(successCallback, errorCallback, 'GameCenter', 'getPlayerImage', []);
+    },
+    submitScore: function (successCallback, errorCallback, score) {
+        exec(successCallback, errorCallback, "GameCenter", "submitScore", [score]);
+    },
+    showLeaderboard: function (successCallback, errorCallback, leaderboardID) {
         exec(successCallback, errorCallback, 'GameCenter', 'showLeaderboard', [leaderboardID]);
+    },
+    reportAchievement: function (successCallback, errorCallback, achievement) {
+        exec(successCallback, errorCallback, 'GameCenter', 'reportAchievement', [achievement]);
+    },
+    resetAchievements: function (successCallback, errorCallback) {
+        exec(successCallback, errorCallback, 'GameCenter', 'resetAchievements', []);
+    },
+    getAchievements: function (successCallback, errorCallback) {
+        exec(successCallback, errorCallback, 'GameCenter', 'getAchievements', []);
     }
 };
 
