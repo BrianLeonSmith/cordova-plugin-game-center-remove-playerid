@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-game-center-remove-playerid" version="0.4.39">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-game-center-remove-playerid" version="0.4.40">
     <name>Game Center</name>
     <author>Brian Leon Smith (https://madebyleon.app/)</author>
     <description>Cordova Game Center Plugin to utilise the iOS Game Center in your app.
@@ -24,5 +24,11 @@
         <source-file src="src/ios/GameCenter.m" />
         <framework src="GameKit.framework" />
         <framework src="Foundation.framework" />
+        <config-file target="**/Entitlements-Debug.plist" parent="com.apple.developer.game-center">
+            <true/>
+        </config-file>
+        <config-file target="**/Entitlements-Release.plist" parent="com.apple.developer.game-center">
+            <true/>
+        </config-file>
     </platform>
 </plugin>

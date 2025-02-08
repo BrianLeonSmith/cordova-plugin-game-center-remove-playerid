@@ -1,7 +1,5 @@
 ## Game Center Plugin for Apache Cordova
 
-#### ⚠️ Please note this is a work in progress and may not work as intended
-
 This plugin allows developers to utilise the iOS Game Center in their Cordova app.
 
 ### Before you start
@@ -47,7 +45,7 @@ GameCenter.auth(successCallback, failureCallback);
 Loads the current player's photo. Automatically cached on first retrieval.
 
 ```
-var successCallback = function (path) {
+var successCallback = (path) => {
     alert("Success: " + path);
 };
 
@@ -105,7 +103,7 @@ GameCenter.resetAchievements(successCallback, failureCallback);
 Fetches the user's achievements from the game center:
 
 ```
-var successCallback = function (results) {
+var successCallback = (results) => {
 	if (results) {
     	for (var i = 0; i < results.length; i += 1) {
             results[i].identifier
